@@ -1,0 +1,5 @@
+# Optional: hands-free voice in 100% local mode.
+# - Uses local faster-whisper only (no cloud STT provider required).
+# - /api/voice-command uses pydub (in requirements.txt); install ffmpeg on the server.
+-r requirements.txt
+sounddevice>=0.4.6

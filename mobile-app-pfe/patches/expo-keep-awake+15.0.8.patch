@@ -1,0 +1,43 @@
+diff --git a/node_modules/expo-keep-awake/src/index.ts b/node_modules/expo-keep-awake/src/index.ts
+index b7a856e..6494af5 100644
+--- a/node_modules/expo-keep-awake/src/index.ts
++++ b/node_modules/expo-keep-awake/src/index.ts
+@@ -30,11 +30,15 @@ export function useKeepAwake(tag?: string, options?: KeepAwakeOptions): void {
+ 
+   useEffect(() => {
+     let isMounted = true;
+-    activateKeepAwakeAsync(tagOrDefault).then(() => {
+-      if (isMounted && ExpoKeepAwake.addListenerForTag && options?.listener) {
+-        addListener(tagOrDefault, options.listener);
+-      }
+-    });
++    activateKeepAwakeAsync(tagOrDefault)
++      .then(() => {
++        if (isMounted && ExpoKeepAwake.addListenerForTag && options?.listener) {
++          addListener(tagOrDefault, options.listener);
++        }
++      })
++      .catch(() => {
++        // Android (Expo Go / dev): `CurrentActivityNotFound` when keep-awake runs before the activity is ready.
++      });
+     return () => {
+       isMounted = false;
+       if (options?.suppressDeactivateWarnings) {
+diff --git a/node_modules/expo-keep-awake/tsconfig.json b/node_modules/expo-keep-awake/tsconfig.json
+index ae1ae0d..6c2df91 100644
+--- a/node_modules/expo-keep-awake/tsconfig.json
++++ b/node_modules/expo-keep-awake/tsconfig.json
+@@ -1,9 +1,8 @@
+ {
+-  "extends": "expo-module-scripts/tsconfig.base",
++  "extends": "../expo/tsconfig.base",
+   "compilerOptions": {
+-    "outDir": "./build",
+-    "emitDeclarationOnly": true
++    "strict": true
+   },
+-  "include": ["./src"],
+-  "exclude": ["**/__mocks__/*", "**/__tests__/*", "**/__rsc_tests__/*"]
++  "include": ["./src/**/*.ts"],
++  "exclude": ["**/node_modules/**"]
+ }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Test flux MJPEG</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 1rem; background: #0f172a; color: #e2e8f0; }
+    iframe { width: 100%; max-width: 960px; height: 540px; border: 2px solid #334155; background: #000; display: block; }
+    input { width: min(640px, 100%); padding: 0.5rem; margin: 0.5rem 0; }
+    p { max-width: 52rem; line-height: 1.5; }
+    #status { color: #94a3b8; font-size: 0.9rem; }
+    #err { color: #f87171; }
+  </style>
+</head>
+<body>
+  <h1>Test flux caméra</h1>
+  <p>
+    Chrome gère mal le MJPEG <code>multipart/x-mixed-replace</code> avec une balise
+    <code>&lt;img&gt;</code>. Cette page utilise un <strong>iframe</strong> (comme le dashboard Expo).
+  </p>
+  <label>URL du flux : <input id="url" value="http://127.0.0.1:8780/camera/mjpeg" /></label>
+  <br />
+  <button type="button" id="go">Charger</button>
+  <button type="button" id="probe">Tester GET (taille)</button>
+  <p id="status"></p>
+  <p id="err"></p>
+  <iframe id="stream" title="Flux caméra MJPEG"></iframe>
+  <script>
+    const input = document.getElementById("url");
+    const frame = document.getElementById("stream");
+    const status = document.getElementById("status");
+    const err = document.getElementById("err");
+
+    function loadStream() {
+      err.textContent = "";
+      status.textContent = "Chargement iframe… (1re frame Pi : jusqu’à 1–2 min)";
+      const u = input.value.trim();
+      frame.src = u + (u.includes("?") ? "&" : "?") + "_=" + Date.now();
+    }
+
+    document.getElementById("go").onclick = loadStream;
+
+    document.getElementById("probe").onclick = async () => {
+      err.textContent = "";
+      status.textContent = "GET en cours (max 90 s)…";
+      const u = input.value.trim();
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), 90000);
+      try {
+        const res = await fetch(u, { signal: ctrl.signal });
+        const reader = res.body?.getReader();
+        let total = 0;
+        if (reader) {
+          for (let i = 0; i < 8; i++) {
+            const { done, value } = await reader.read();
+            if (done || !value) break;
+            total += value.length;
+            if (total > 5000) break;
+          }
+          reader.cancel().catch(() => {});
+        }
+        clearTimeout(t);
+        if (!res.ok) {
+          err.textContent = "HTTP " + res.status + " — voir Pi : PI_CAMERA_MJPEG=1, journalctl terrain-backend-api";
+          status.textContent = "";
+          return;
+        }
+        if (total === 0) {
+          err.textContent =
+            "0 octet reçu : capture Picamera2 échouée sur la Pi (GET /camera/mjpeg). HEAD peut quand même être 200.";
+          status.textContent = "";
+          return;
+        }
+        status.textContent = "OK — " + total + "+ octets reçus (HTTP " + res.status + "). Le flux devrait s’afficher dans l’iframe.";
+      } catch (e) {
+        clearTimeout(t);
+        err.textContent = String(e.message || e);
+        status.textContent = "";
+      }
+    };
+
+    loadStream();
+  </script>
+</body>
+</html>

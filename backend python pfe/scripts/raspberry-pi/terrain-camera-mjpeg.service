@@ -1,0 +1,27 @@
+# Service MJPEG séparé (Python système + Picamera2 apt).
+# Le backend OCR reste sur .venv Python 3.12 (paddle 2.6) port 8000.
+#
+# Installation :
+#   sudo cp scripts/raspberry-pi/terrain-camera-mjpeg.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now terrain-camera-mjpeg
+#
+# Proxy Mac : CAMERA_UPSTREAM=http://10.42.0.1:8001/camera/mjpeg npm run proxy:all
+
+[Unit]
+Description=Terrain MJPEG sidecar (Picamera2, system Python)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=emna
+WorkingDirectory=/home/emna/backend-python-pfe
+Environment=PI_CAMERA_MJPEG=1
+Environment=PI_CAMERA_BACKEND=picamera2
+ExecStart=/usr/bin/python3 /home/emna/backend-python-pfe/scripts/raspberry-pi/mjpeg_sidecar.py --port 8001
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

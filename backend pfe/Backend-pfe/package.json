@@ -1,0 +1,21 @@
+{
+  "name": "backend-pfe-convex",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "convex dev",
+    "deploy": "convex deploy",
+    "convex:docker:up": "docker compose -f self-hosted/docker/docker-compose.yml up -d",
+    "convex:docker:down": "docker compose -f self-hosted/docker/docker-compose.yml down",
+    "convex:docker:logs": "docker compose -f self-hosted/docker/docker-compose.yml logs -f backend",
+    "agents:export-cloud": "bash scripts/sync-agents-cloud-to-pi.sh export",
+    "agents:import-pi": "bash scripts/sync-agents-cloud-to-pi.sh import",
+    "agents:deploy-pi": "bash scripts/sync-agents-cloud-to-pi.sh deploy"
+  },
+  "dependencies": {
+    "convex": "^1.35.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

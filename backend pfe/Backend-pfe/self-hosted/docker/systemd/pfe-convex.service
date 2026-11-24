@@ -1,0 +1,20 @@
+[Unit]
+Description=PFE Convex self-hosted (docker compose)
+Documentation=file:///home/emna/Backend-pfe/self-hosted/docker/systemd/INSTALL.txt
+After=docker.service network-online.target
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+User=emna
+Group=emna
+WorkingDirectory=/home/emna/Backend-pfe
+# Compose plugin must be available (e.g. /usr/local/lib/docker/cli-plugins/docker-compose).
+ExecStart=/usr/bin/docker compose -f self-hosted/docker/docker-compose.yml up -d
+ExecStop=/usr/bin/docker compose -f self-hosted/docker/docker-compose.yml stop
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target

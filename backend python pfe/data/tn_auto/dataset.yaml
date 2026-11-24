@@ -1,0 +1,6 @@
+path: /Users/mac/Desktop/backend python pfe/data/tn_auto
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: plate

@@ -1,0 +1,28 @@
+# Service systemd : API FastAPI (health, WebSocket /alerts, /camera/mjpeg si PI_CAMERA_MJPEG=1).
+# Les variables du fichier .env du projet sont lues par python-dotenv dans app.py (pas par systemd).
+#
+# Chemins par défaut : utilisateur emna, projet ~/backend-python-pfe
+# Si le port 8000 est déjà pris : sudo fuser -k 8000/tcp  puis sudo systemctl restart terrain-backend-api
+#
+# Installation : voir scripts/raspberry-pi/install-terrain-backend-service.sh
+
+[Unit]
+Description=Terrain backend FastAPI (OCR + alertes + caméra MJPEG)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# ExecStartPre tourne en root : fuser peut libérer 8000 même si l’ancien processus était root / Docker-proxy (sinon EADDRINUSE en boucle).
+PermissionsStartOnly=true
+User=emna
+WorkingDirectory=/home/emna/backend-python-pfe
+# Libère le port 8000 (paquet psmisc). Le « - » ignore l’échec si le port est déjà libre.
+ExecStartPre=-/usr/bin/fuser -k 8000/tcp
+ExecStart=/home/emna/backend-python-pfe/.venv/bin/uvicorn app:app --host 0.0.0.0 --port 8000
+Restart=on-failure
+RestartSec=8
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

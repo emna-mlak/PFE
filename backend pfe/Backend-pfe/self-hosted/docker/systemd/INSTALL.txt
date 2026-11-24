@@ -1,0 +1,88 @@
+Convex auto-start on Raspberry Pi (copy these paths/commands onto the Pi).
+
+1) Install the unit (once)
+
+   sudo cp /home/emna/Backend-pfe/self-hosted/docker/systemd/pfe-convex.service /etc/systemd/system/
+   sudo systemctl daemon-reload
+   sudo systemctl enable pfe-convex.service
+   sudo systemctl start pfe-convex.service
+
+   Logs:
+   sudo journalctl -u pfe-convex.service -n 50 --no-pager
+
+   Note: Type=oneshot runs docker compose up -d and exits; Restart= in systemd does not
+   re-run that reliably. Container restarts are handled by restart: unless-stopped in
+   docker-compose.yml.
+
+2) Order Python services after Convex (optional)
+
+   Option A — dependency only (Convex starts before backend; backend still starts if Convex failed):
+
+   sudo systemctl edit pfe-backend.service
+
+   Add:
+
+   [Unit]
+   After=pfe-convex.service docker.service
+
+   Repeat for pfe-vision if desired (often After=pfe-backend.service is enough).
+
+   sudo systemctl daemon-reload
+
+   Option B — wait until Convex responds on 3210 before FastAPI (same pattern as pfe-vision + :8000).
+   In an override for pfe-backend.service:
+
+   [Service]
+   ExecStartPre=/bin/bash -c 'for i in $(seq 1 120); do curl -fsS http://127.0.0.1:3210/version >/dev/null && exit 0; sleep 1; done; exit 1'
+
+3) Seed demo data (plate 12345-A-6, vignette, agent + road laws)
+
+   cd /home/emna/Backend-pfe
+   set -a && source .env.local && set +a
+   npx convex run seed:seedDemoData
+   npx convex run seed:seedRoadLaws
+
+   Verify:
+
+   curl -sS "http://127.0.0.1:3211/vehicleLookup?matricule=12345-A-6"
+
+3b) Sync agents cloud → Pi (mobile login on hotspot, no Internet)
+
+   Mobile uses EXPO_PUBLIC_CONVEX_URL=http://10.42.0.1:3210 and agents:login.
+   Cloud accounts are NOT on the Pi DB until you import or upsert them.
+
+   On Mac (WiFi, once):
+     cd Backend-pfe
+     chmod +x scripts/sync-agents-cloud-to-pi.sh
+     ./scripts/sync-agents-cloud-to-pi.sh export
+     scp agents-cloud.jsonl emna@PI_IP:/home/emna/Backend-pfe/
+
+   On Pi (hotspot OK):
+     cd /home/emna/Backend-pfe
+     ./scripts/sync-agents-cloud-to-pi.sh import
+
+   Or one agent manually (same email/password as cloud):
+     AGENT_ID=... AUTH_USER_ID=... AGENT_EMAIL=... AGENT_NOM=... \\
+       AGENT_PASSWORD='...' ./scripts/sync-agents-cloud-to-pi.sh upsert
+
+   Smoke test:
+     AGENT_EMAIL=... AGENT_PASSWORD='...' ./scripts/sync-agents-cloud-to-pi.sh test-login
+
+   Health: curl -fsS http://127.0.0.1:3210/version
+
+4) Backup Convex Docker volume before a demo (volume name may be docker_data or project_prefixed)
+
+   docker volume ls | grep -E 'docker_data|convex'
+   docker run --rm -v docker_data:/data -v "$PWD:/backup" alpine tar czf /backup/convex-data-$(date +%Y%m%d).tgz -C /data .
+
+   Adjust docker_data if docker compose created another volume name (inspect with docker volume ls).
+
+5) rsync from Mac without overwriting Pi secrets
+
+   rsync -avz \
+     --exclude node_modules \
+     --exclude .git \
+     --exclude .env.local \
+     --exclude .env \
+     "/Users/mac/Desktop/backend pfe/Backend-pfe/" \
+     emna@PI_IP:/home/emna/Backend-pfe/

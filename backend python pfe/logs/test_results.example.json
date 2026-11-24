@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-05-25T12:00:00+00:00",
+  "dataset_dir": "tests/dataset",
+  "count": 3,
+  "results": [
+    {
+      "image": "tests/dataset/217_TUN_4080.jpg",
+      "ground_truth": "217 TUN 4080",
+      "status": "success",
+      "plate_text": "217 TUN 4080",
+      "ocr_confidence": 0.91,
+      "yolo_confidence": 0.88,
+      "raw_ocr_text": "217TUN4080",
+      "sharpness": 120.0
+    },
+    {
+      "image": "tests/dataset/099_TUN_1234.jpg",
+      "ground_truth": "099 TUN 1234",
+      "status": "not_detected",
+      "plate_text": "",
+      "ocr_confidence": 0.0,
+      "yolo_confidence": 0.0,
+      "raw_ocr_text": "",
+      "sharpness": 45.0
+    },
+    {
+      "image": "tests/dataset/150_TUN_5678.jpg",
+      "ground_truth": "150 TUN 5678",
+      "status": "success",
+      "plate_text": "150 TUN 5679",
+      "ocr_confidence": 0.75,
+      "yolo_confidence": 0.82,
+      "raw_ocr_text": "150TUN5679",
+      "sharpness": 90.0
+    }
+  ]
+}

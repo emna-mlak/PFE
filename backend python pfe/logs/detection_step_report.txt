@@ -1,0 +1,43 @@
+
+════════════════════════════════════════════════════════════════
+  ÉTAPE 1 — Détection spatiale (YOLOv8) · corpus de test PFE
+════════════════════════════════════════════════════════════════
+  Exécution : 2026-06-01 21:32:50 UTC
+  Script   : scripts/report_detection_step.py
+  Poids    : models/best.pt
+
+────────────────────────────────────────────────────────────────
+  SYNTHÈSE DU CORPUS
+────────────────────────────────────────────────────────────────
+  Taille du corpus              : 100 images
+  Plaques détectées (exploit.)  : 85
+  Non détectées / non exploit.  : 15
+  Taux de détection global      : 85.00 %
+
+  [████████████████████░░░░] 85.0%
+
+────────────────────────────────────────────────────────────────
+  ANALYSE DES ÉCHECS DE DÉTECTION
+  (n = 15 images)
+────────────────────────────────────────────────────────────────
+  • Géométrie de prise de vue
+      Plaque hors champ, inclinaison excessive, éloignement
+      Occurrences : 7  (46.7 % des échecs · 7.0 % du corpus)
+
+  • Dégradation physique
+      Numéros effacés ou usure du support
+      Occurrences : 5  (33.3 % des échecs · 5.0 % du corpus)
+
+  • Support non standard
+      Absence de numéro lisible, format hors référentiel TN
+      Occurrences : 3  (20.0 % des échecs · 3.0 % du corpus)
+
+────────────────────────────────────────────────────────────────
+  STATUT
+────────────────────────────────────────────────────────────────
+  Étape 1 terminée. Les 85 images détectées sont transmises à l'étape 2
+  (recadrage + PaddleOCR + post-traitement XXX TUN XXXX).
+
+  Rapport enregistré : logs/detection_step_report.txt
+════════════════════════════════════════════════════════════════
+

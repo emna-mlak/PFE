@@ -1,0 +1,33 @@
+filename,ground_truth,predicted_hint,status
+Screenshot 2026-06-01 at 10.04.30 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.04.34 PM.png,131 TUN 870,131 TUN 870,success
+Screenshot 2026-06-01 at 10.05.33 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.05.36 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.05.39 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.05.41 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.05.44 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.05.46 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.05.49 PM.png,164 TUN 5864,164 TUN 5864,success
+Screenshot 2026-06-01 at 10.05.52 PM.png,110 TUN 6829,110 TUN 6829,success
+Screenshot 2026-06-01 at 10.05.55 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.05.59 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.06.02 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.06.05 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.06.07 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.06.10 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.06.24 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.06.26 PM.png,111 TUN 5700,111 TUN 5700,success
+Screenshot 2026-06-01 at 10.06.28 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.06.31 PM.png,,,not_detected
+Screenshot 2026-06-01 at 10.06.33 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.06.35 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.06.39 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.06.41 PM.png,172 TUN 6302,172 TUN 6302,success
+Screenshot 2026-06-01 at 10.06.43 PM.png,,,low_confidence
+Screenshot 2026-06-01 at 10.08.26 PM.png,72 TUN 5043,73 TUN 5043,low_confidence
+Screenshot 2026-06-01 at 10.08.28 PM.png,129 TUN 3973,129 TUN 3973,success
+Screenshot 2026-06-01 at 10.08.30 PM.png,170 TUN 9107,170 TUN 9107,success
+Screenshot 2026-06-01 at 10.08.32 PM.png,126 TUN 8208,126 TUN 8208,low_confidence
+Screenshot 2026-06-01 at 10.08.35 PM.png,"153 TUN 3222,","153 TUN 3222,",low_confidence
+Screenshot 2026-06-01 at 10.08.37 PM.png,140 TUN 1714,140 TUN 1714,low_confidence
+Screenshot 2026-06-01 at 10.08.39 PM.png,172 TUN 6302,172 TUN 6302,success

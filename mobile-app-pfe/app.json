@@ -1,0 +1,74 @@
+{
+  "expo": {
+    "name": "ONSR Agent",
+    "slug": "mobile-app-pfe",
+    "scheme": "onsr-agent",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "bundleIdentifier": "com.trafficagent.mvp",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Autoriser la caméra pour photographier une infraction ou une session live.",
+        "NSMicrophoneUsageDescription": "Autoriser le microphone pour les sessions live.",
+        "NSPhotoLibraryUsageDescription": "Autoriser l’accès à la photothèque pour joindre une photo à l’infraction.",
+        "NSLocationWhenInUseUsageDescription": "Autoriser la localisation pour afficher la position de l’agent sur l’écran principal.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Autoriser la localisation pour afficher la position de l’agent."
+      }
+    },
+    "android": {
+      "package": "com.trafficagent.mvp",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_MEDIA_IMAGES",
+        "READ_EXTERNAL_STORAGE",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "./plugins/withAndroidStandaloneBundle.js",
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Autoriser l’accès à vos photos pour joindre une image à l’infraction.",
+          "cameraPermission": "Autoriser la caméra pour photographier l’infraction."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Autoriser l’accès à la position pour afficher votre localisation sur l’écran principal.",
+          "locationAlwaysAndWhenInUsePermission": "Autoriser la localisation pour afficher votre position d’agent."
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ]
+  }
+}

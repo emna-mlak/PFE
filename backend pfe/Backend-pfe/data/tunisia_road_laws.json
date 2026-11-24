@@ -1,0 +1,493 @@
+[
+  {
+    "article": "Article 85",
+    "type": "délit",
+    "description": "non respect des signalisations ou des indications d'arrêt",
+    "details": "",
+    "sanction": "Amende de 100 à 200 dinars.",
+    "keywords": [
+      "signalisation",
+      "arrêt",
+      "stop"
+    ]
+  },
+  {
+    "article": "Article 85",
+    "type": "délit",
+    "description": "stationnement ou arrêt ou marche arrière sur la chaussée des autoroutes",
+    "details": "",
+    "sanction": "Amende de 100 à 200 dinars.",
+    "keywords": [
+      "stationnement",
+      "arrêt",
+      "marche arrière",
+      "autoroute"
+    ]
+  },
+  {
+    "article": "Article 85",
+    "type": "délit",
+    "description": "utilisation de plus d'un permis de conduire de la même catégorie",
+    "details": "",
+    "sanction": "Amende de 100 à 200 dinars.",
+    "keywords": [
+      "permis de conduire",
+      "double permis",
+      "catégorie"
+    ]
+  },
+  {
+    "article": "Article 85",
+    "type": "délit",
+    "description": "transport de personnes sur un véhicule non aménagé à cet effet",
+    "details": "",
+    "sanction": "Amende de 100 à 200 dinars.",
+    "keywords": [
+      "transport de personnes",
+      "véhicule non aménagé"
+    ]
+  },
+  {
+    "article": "Article 85",
+    "type": "délit",
+    "description": "non changement du certificat d'immatriculation dans un délai de trois mois après transfert de propriété ou obtention du certificat pour l'immatriculation délivrée par la douane",
+    "details": "",
+    "sanction": "Amende de 100 à 200 dinars.",
+    "keywords": [
+      "certificat d'immatriculation",
+      "transfert de propriété",
+      "douane"
+    ]
+  },
+  {
+    "article": "Article 85",
+    "type": "délit",
+    "description": "non respect des dispositions du cahier des charges relatif à l'exploitation d'établissements d'enseignement de la conduite des véhicules ou de centres spécialisés de formation",
+    "details": "",
+    "sanction": "Amende de 100 à 200 dinars.",
+    "keywords": [
+      "cahier des charges",
+      "enseignement de la conduite",
+      "centre de formation"
+    ]
+  },
+  {
+    "article": "Article 85",
+    "type": "délit",
+    "description": "défaut de notification de la destruction d'un véhicule",
+    "details": "",
+    "sanction": "Amende de 100 à 200 dinars.",
+    "keywords": [
+      "destruction du véhicule",
+      "notification"
+    ]
+  },
+  {
+    "article": "Article 85",
+    "type": "délit",
+    "description": "utilisation d'un véhicule qui dégage un gaz ou émet un bruit dépassant les limites autorisées d'un taux supérieur ou égal à cinquante pour cent",
+    "details": "",
+    "sanction": "Amende de 100 à 200 dinars.",
+    "keywords": [
+      "gaz",
+      "bruit",
+      "limites autorisées",
+      "pollution"
+    ]
+  },
+  {
+    "article": "Article 85",
+    "type": "délit",
+    "description": "mise en circulation d'un véhicule sans visite technique ou utilisation d'une attestation de visite technique périmée",
+    "details": "",
+    "sanction": "Amende de 100 à 200 dinars.",
+    "keywords": [
+      "visite technique",
+      "attestation périmée"
+    ]
+  },
+  {
+    "article": "Article 85",
+    "type": "délit",
+    "description": "refus d'obtempérer au signal d'arrêt ou de se soumettre au contrôle des agents habilités",
+    "details": "",
+    "sanction": "Amende de 100 à 200 dinars.",
+    "keywords": [
+      "refus d'obtempérer",
+      "signal d'arrêt",
+      "contrôle"
+    ]
+  },
+  {
+    "article": "Article 86",
+    "type": "délit",
+    "description": "mise en circulation d'un véhicule ou d'un ensemble de véhicules en surcharge",
+    "details": "Le poids total dépasse le poids total autorisé en charge, le poids total roulant autorisé ou la charge légale autorisée sur l'essieu.",
+    "sanction": "Amende de 100 à 500 dinars.",
+    "keywords": [
+      "surcharge",
+      "poids total autorisé",
+      "essieu",
+      "chargement"
+    ]
+  },
+  {
+    "article": "Article 86",
+    "type": "délit",
+    "description": "dépassement de la vitesse maximale autorisée de cinquante km/h ou plus",
+    "details": "",
+    "sanction": "Amende de 120 à 240 dinars.",
+    "keywords": [
+      "vitesse",
+      "excès de vitesse",
+      "50 km/h",
+      "radar"
+    ]
+  },
+  {
+    "article": "Article 86",
+    "type": "délit",
+    "description": "conduite contrairement aux prescriptions de la décision de retrait de permis de conduire",
+    "details": "",
+    "sanction": "Emprisonnement d'un mois au maximum et amende de 120 à 200 dinars, ou l'une de ces deux peines seulement. En cas de récidive, le maximum de l'une des deux peines est prononcé.",
+    "keywords": [
+      "retrait de permis",
+      "conduite malgré retrait"
+    ]
+  },
+  {
+    "article": "Article 86",
+    "type": "délit",
+    "description": "conduite en dépit du retrait du permis prévu à l'article 94 bis du présent Code",
+    "details": "",
+    "sanction": "Emprisonnement d'un mois au maximum et amende de 120 à 200 dinars, ou l'une de ces deux peines seulement. En cas de récidive, le maximum de l'une des deux peines est prononcé.",
+    "keywords": [
+      "retrait de permis",
+      "article 94 bis"
+    ]
+  },
+  {
+    "article": "Article 86",
+    "type": "délit",
+    "description": "non respect des signalisations et des indications des passages à niveau ou traversée de leurs barrières",
+    "details": "",
+    "sanction": "Emprisonnement d'un mois au maximum et amende de 120 à 200 dinars, ou l'une de ces deux peines seulement. En cas de récidive, le maximum de l'une des deux peines est prononcé.",
+    "keywords": [
+      "passage à niveau",
+      "barrières",
+      "signalisation"
+    ]
+  },
+  {
+    "article": "Article 86",
+    "type": "délit",
+    "description": "dépassement interdit",
+    "details": "",
+    "sanction": "Emprisonnement d'un mois au maximum et amende de 120 à 200 dinars, ou l'une de ces deux peines seulement. En cas de récidive, le maximum de l'une des deux peines est prononcé.",
+    "keywords": [
+      "dépassement interdit"
+    ]
+  },
+  {
+    "article": "Article 86",
+    "type": "délit",
+    "description": "fuite du conducteur après avoir occasionné des dégâts matériels à un autre véhicule pour se soustraire à sa responsabilité civile",
+    "details": "",
+    "sanction": "Emprisonnement d'un mois au maximum et amende de 120 à 200 dinars, ou l'une de ces deux peines seulement. En cas de récidive, le maximum de l'une des deux peines est prononcé.",
+    "keywords": [
+      "fuite",
+      "dégâts matériels",
+      "responsabilité civile"
+    ]
+  },
+  {
+    "article": "Article 86",
+    "type": "délit",
+    "description": "pose, utilisation ou installation d'un dispositif de détection de radar dans le véhicule",
+    "details": "",
+    "sanction": "Emprisonnement d'un mois au maximum et amende de 120 à 200 dinars, ou l'une de ces deux peines seulement. En cas de récidive, le maximum de l'une des deux peines est prononcé.",
+    "keywords": [
+      "détection de radar",
+      "radar",
+      "dispositif"
+    ]
+  },
+  {
+    "article": "Article 86",
+    "type": "délit",
+    "description": "utilisation d'un véhicule transportant un conteneur non fixé par des twist-locks",
+    "details": "",
+    "sanction": "Emprisonnement d'un mois au maximum et amende de 120 à 200 dinars, ou l'une de ces deux peines seulement. En cas de récidive, le maximum de l'une des deux peines est prononcé.",
+    "keywords": [
+      "conteneur",
+      "twist-locks",
+      "fixation"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "conduite sous l'empire d'un état alcoolique",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "alcool",
+      "état alcoolique",
+      "ivresse"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "conduite sans permis de conduire ou sans avoir obtenu la catégorie requise",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "sans permis",
+      "catégorie requise"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "circulation en sens contraire sur les autoroutes ou demi-tour en traversant le terre-plein ou en empruntant les passages spéciaux",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "sens contraire",
+      "autoroute",
+      "demi-tour",
+      "terre-plein"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "refus d'obtempérer au signal d'arrêt ou de se soumettre au contrôle des agents habilités et non respect des barrages physiques posés par ces agents",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "refus d'obtempérer",
+      "contrôle",
+      "barrage physique"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "refus de se soumettre à la procédure relative à la preuve de l'état alcoolique",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "preuve alcoolique",
+      "alcool",
+      "refus de test"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "utilisation en circulation, par le propriétaire ou le représentant légal d'une personne morale, d'un véhicule dépourvu de plaque de constructeur",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "plaque de constructeur"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "transformations notables apportées à un véhicule sans autorisation",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "transformations",
+      "sans autorisation",
+      "modification véhicule"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "enseignement de la conduite sans licence",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "enseignement de la conduite",
+      "sans licence"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "enseignement de la conduite sans certificat d'aptitude professionnelle",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "certificat d'aptitude professionnelle",
+      "enseignement de la conduite"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "infractions aux dispositions relatives à la circulation sur les ponts, à la circulation d'ensembles composés de plusieurs véhicules remorqués et au transport exceptionnel",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "ponts",
+      "véhicules remorqués",
+      "transport exceptionnel"
+    ]
+  },
+  {
+    "article": "Article 87",
+    "type": "délit",
+    "description": "exploitation d'un établissement d'enseignement de la conduite des véhicules ou d'un centre spécialisé de formation sans signer le cahier des charges et sans déposer la déclaration de démarrage",
+    "details": "",
+    "sanction": "Emprisonnement de six mois au maximum et amende de 200 à 500 dinars, ou l'une de ces deux peines seulement.",
+    "keywords": [
+      "exploitation",
+      "enseignement de la conduite",
+      "cahier des charges",
+      "déclaration de démarrage"
+    ]
+  },
+  {
+    "article": "Article 88 n°3",
+    "type": "",
+    "description": "circulation avec un véhicule non équipé des plaques d'immatriculation requises, avec plaque couverte totalement ou partiellement, ou avec une plaque portant un numéro ne concernant pas le véhicule",
+    "details": "",
+    "sanction": "",
+    "keywords": [
+      "plaque d'immatriculation",
+      "plaque couverte",
+      "numéro ne le concernant pas"
+    ]
+  },
+  {
+    "article": "Article 92",
+    "type": "",
+    "description": "cas de retrait du permis de conduire",
+    "details": "Retrait du permis en cas de conduite sous état alcoolique ou refus de preuve alcoolique, circulation en sens contraire sur autoroute ou demi-tour interdit, homicide ou blessure involontaire.",
+    "sanction": "Retrait du permis de conduire.",
+    "keywords": [
+      "retrait permis",
+      "alcool",
+      "sens contraire",
+      "homicide involontaire",
+      "blessure involontaire"
+    ]
+  },
+  {
+    "article": "Article 93",
+    "type": "",
+    "description": "durée du retrait du permis de conduire",
+    "details": "Durée maximale de six mois pour les délits visés à l'article 92 numéros 1 et 2. Durée maximale d'un an en cas de nouvelle commission dans l'année suivant l'expiration du retrait. La durée est doublée en cas de conduite contrairement aux prescriptions de la décision de retrait.",
+    "sanction": "Retrait du permis jusqu'à six mois, jusqu'à un an, ou durée doublée selon le cas.",
+    "keywords": [
+      "durée retrait permis",
+      "récidive",
+      "doublement"
+    ]
+  },
+  {
+    "article": "Article 94",
+    "type": "",
+    "description": "durée du retrait du permis en cas d'homicide ou de blessure involontaire",
+    "details": "Retrait de deux ans au maximum. Durée portée à quatre ans si le conducteur est alcoolisé, refuse la preuve alcoolique, n'a pas la catégorie requise, conduit malgré retrait, ou prend la fuite. En cas de récidive dans les deux ans, la durée maximale est de quatre ans.",
+    "sanction": "Retrait du permis jusqu'à deux ans ou quatre ans selon le cas.",
+    "keywords": [
+      "homicide involontaire",
+      "blessure involontaire",
+      "retrait permis",
+      "fuite",
+      "alcool"
+    ]
+  },
+  {
+    "article": "Article 98 alinéa 2",
+    "type": "",
+    "description": "sanction administrative d'un an",
+    "details": "Un an en cas de commission de certains délits prévus aux articles 85, 86 et 87 listés par renvoi dans le texte.",
+    "sanction": "Sanction administrative d'un an.",
+    "keywords": [
+      "sanction administrative",
+      "un an"
+    ]
+  },
+  {
+    "article": "Article 101",
+    "type": "",
+    "description": "procès-verbal et transmission à la justice",
+    "details": "Lors du constat d'une infraction prévue aux articles 85 à 91, un procès-verbal est dressé et transmis à la justice. Une copie est adressée aux autorités administratives compétentes si l'infraction entraîne une sanction administrative.",
+    "sanction": "Procès-verbal transmis à la justice.",
+    "keywords": [
+      "procès-verbal",
+      "justice",
+      "sanction administrative"
+    ]
+  },
+  {
+    "article": "Article 101 bis",
+    "type": "",
+    "description": "procédure radar automatique en cas de dépassement de vitesse",
+    "details": "Notification au propriétaire du véhicule en cas de dépassement de la vitesse maximale autorisée de vingt km/h ou plus prouvée par radar automatique. En cas de dépassement de cinquante km/h ou plus, convocation du propriétaire et transmission à la justice conformément à l'article 101.",
+    "sanction": "Notification de contravention, paiement de l'amende sous vingt jours, ou procès-verbal transmis à la justice selon le cas.",
+    "keywords": [
+      "radar automatique",
+      "vitesse",
+      "notification",
+      "20 km/h",
+      "50 km/h"
+    ]
+  },
+  {
+    "article": "Article 101 ter",
+    "type": "",
+    "description": "opposition à la contravention",
+    "details": "Le propriétaire du véhicule peut s'opposer dans un délai de vingt jours à compter de l'envoi de la notification, au moyen d'un formulaire motivé accompagné des justificatifs et, le cas échéant, de l'identité complète du conducteur. En cas de non-paiement après les délais, le montant de l'amende est doublé et le permis est considéré comme suspendu jusqu'au paiement ou à la régularisation.",
+    "sanction": "Opposition recevable sous conditions; amende doublée en cas de non-paiement; suspension de validité du permis jusqu'au paiement ou à la régularisation.",
+    "keywords": [
+      "opposition",
+      "contravention",
+      "amende doublée",
+      "suspension permis"
+    ]
+  },
+  {
+    "article": "Article 101 quater",
+    "type": "",
+    "description": "obligation de déclaration du conducteur contrevenant par la personne morale propriétaire du véhicule",
+    "details": "Si le propriétaire est une personne morale, elle doit déclarer l'identité du conducteur contrevenant. À défaut dans un délai de vingt jours, la personne morale devient directement redevable du montant de l'amende.",
+    "sanction": "La personne morale paie directement l'amende en cas de non-déclaration.",
+    "keywords": [
+      "personne morale",
+      "déclaration conducteur",
+      "amende"
+    ]
+  },
+  {
+    "article": "Article 103 paragraphe 2",
+    "type": "",
+    "description": "saisie du véhicule",
+    "details": "Dans certains cas, la saisie du véhicule est temporaire et le tribunal peut ordonner sa saisie définitive et sa confiscation. Dans d'autres cas, la saisie se poursuit jusqu'à régularisation de la situation du véhicule.",
+    "sanction": "Saisie temporaire ou définitive et confiscation selon le cas.",
+    "keywords": [
+      "saisie",
+      "confiscation",
+      "véhicule"
+    ]
+  },
+  {
+    "article": "Article 103 paragraphe 1 n°4",
+    "type": "",
+    "description": "saisie pour défaut de plaques d'immatriculation requises",
+    "details": "Si le véhicule n'est pas équipé de deux plaques d'immatriculation lorsqu'elles sont requises, ou d'une seule plaque lorsqu'une seule est requise.",
+    "sanction": "Saisie du véhicule.",
+    "keywords": [
+      "plaque d'immatriculation",
+      "saisie véhicule"
+    ]
+  }
+]

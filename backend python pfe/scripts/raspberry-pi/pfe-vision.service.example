@@ -1,0 +1,26 @@
+# Exemple : bridge OCR + alertes en lisant le MJPEG déjà servi par terrain-backend-api
+# (évite « Device or resource busy » : une seule ouverture Picamera2 dans l’API).
+#
+# Installation sur la Pi :
+#   sudo cp scripts/raspberry-pi/pfe-vision.service.example /etc/systemd/system/pfe-vision.service
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now pfe-vision.service
+#
+# Prérequis : terrain-backend-api actif, PI_CAMERA_MJPEG=1, .env avec CONVEX_VEHICLE_HTTP_URL, secrets alertes.
+
+[Unit]
+Description=PFE Vision bridge (MJPEG local -> OCR -> backend -> alerts)
+After=network-online.target terrain-backend-api.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=emna
+WorkingDirectory=/home/emna/backend-python-pfe
+ExecStartPre=/bin/bash -c 'for i in $(seq 1 120); do curl -fsS http://127.0.0.1:8000/health >/dev/null && exit 0; sleep 1; done; exit 1'
+ExecStart=/home/emna/backend-python-pfe/.venv/bin/python scripts/run_remote_ocr_bridge.py --input backend-mjpeg --sample-every-ms 450
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
